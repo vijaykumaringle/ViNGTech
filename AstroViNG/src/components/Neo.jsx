@@ -33,7 +33,14 @@ export class Neo extends Component {
             let Arr_neo = [];
             this.state.items.map((item, index) => {
                 //return this.state.images.push({original: item.img_src})
-                return Arr_neo.push({ id: `${item.id}`, name: `${item.name}`, url: `${item.nasa_jpl_url}`, absolute_magnitude_h: `${item.absolute_magnitude_h}` })
+                return Arr_neo.push({ 
+                    id: `${item.id}`,
+                    name: `${item.name}`,
+                    url: `<a href='${item.nasa_jpl_url}>${item.nasa_jpl_url}'</a>`,
+                    absolute_magnitude_h: `${item.absolute_magnitude_h}`,
+                    estimated_diameter: `${+item.estimated_diameter.meters.estimated_diameter_min.toFixed(2)} m - ${+item.estimated_diameter.meters.estimated_diameter_max.toFixed(2)} m`,
+                    is_potentially_hazardous_asteroid: `${item.is_potentially_hazardous_asteroid}`
+                 })
             });
             this.setState({
                 Arr_neo_data: Arr_neo
@@ -59,7 +66,14 @@ export class Neo extends Component {
             let Arr_neo = [];
             this.state.items.map((item, index) => {
                 //return this.state.images.push({original: item.img_src})
-                return Arr_neo.push({ id: `${item.id}`, name: `${item.name}`, url: `${item.nasa_jpl_url}`, absolute_magnitude_h: `${item.absolute_magnitude_h}` })
+                return Arr_neo.push({ 
+                    id: `${item.id}`, 
+                    name: `${item.name}`, 
+                    url: `<a href=${item.nasa_jpl_url}>${item.nasa_jpl_url}</a>`, 
+                    absolute_magnitude_h: `${item.absolute_magnitude_h}`,
+                    estimated_diameter: `${+item.estimated_diameter.meters.estimated_diameter_min.toFixed(2)}m - ${+item.estimated_diameter.meters.estimated_diameter_max.toFixed(2)}m`,
+                    is_potentially_hazardous_asteroid: `${item.is_potentially_hazardous_asteroid}`
+                 })
             });
             this.setState({
                 Arr_neo_data: Arr_neo
@@ -93,8 +107,20 @@ export class Neo extends Component {
             // right: true,
         },
         {
-            name: 'absolute_magnitude_h',
+            name: 'H (mag)',
             selector: 'absolute_magnitude_h',
+            sortable: true,
+            // right: true,
+        },
+        {
+            name: 'Diameter (m)',
+            selector: 'estimated_diameter',
+            // sortable: true,
+            // right: true,
+        },
+        {
+            name: 'Potential threat?',
+            selector: 'is_potentially_hazardous_asteroid',
             sortable: true,
             // right: true,
         },
