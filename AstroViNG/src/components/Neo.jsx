@@ -61,10 +61,13 @@ export class Neo extends Component {
                 return Arr_neo.push({ 
                     id: `${item.id}`,
                     name: `${item.name}`,
-                    url: `<a href='${item.nasa_jpl_url}>${item.nasa_jpl_url}'</a>`,
+                    url: `${item.nasa_jpl_url}`, 
                     absolute_magnitude_h: `${item.absolute_magnitude_h}`,
                     estimated_diameter: `${+item.estimated_diameter.meters.estimated_diameter_min.toFixed(2)} m - ${+item.estimated_diameter.meters.estimated_diameter_max.toFixed(2)} m`,
-                    is_potentially_hazardous_asteroid: `${item.is_potentially_hazardous_asteroid}`
+                    is_potentially_hazardous_asteroid: `${item.is_potentially_hazardous_asteroid}`,
+                    close_approach_date: `${item.close_approach_data[0].close_approach_date}`,
+                    relative_velocity: `${parseFloat(item.close_approach_data[0].relative_velocity.kilometers_per_hour).toFixed(2)}`,
+                    miss_distance: `${parseFloat(item.close_approach_data[0].miss_distance.kilometers).toFixed(2)}`,
                  })
             });
             this.setState({
@@ -94,10 +97,13 @@ export class Neo extends Component {
                 return Arr_neo.push({ 
                     id: `${item.id}`, 
                     name: `${item.name}`, 
-                    url: `<a href=${item.nasa_jpl_url}>${item.nasa_jpl_url}</a>`, 
+                    url: `${item.nasa_jpl_url}`, 
                     absolute_magnitude_h: `${item.absolute_magnitude_h}`,
                     estimated_diameter: `${+item.estimated_diameter.meters.estimated_diameter_min.toFixed(2)}m - ${+item.estimated_diameter.meters.estimated_diameter_max.toFixed(2)}m`,
-                    is_potentially_hazardous_asteroid: `${item.is_potentially_hazardous_asteroid}`
+                    is_potentially_hazardous_asteroid: `${item.is_potentially_hazardous_asteroid}`,
+                    close_approach_date: `${item.close_approach_data[0].close_approach_date}`,
+                    relative_velocity: `${parseFloat(item.close_approach_data[0].relative_velocity.kilometers_per_hour).toFixed(2)}`,
+                    miss_distance: `${parseFloat(item.close_approach_data[0].miss_distance.kilometers).toFixed(2)}`,
                  })
             });
             this.setState({
@@ -123,13 +129,7 @@ export class Neo extends Component {
             name: 'Name',
             selector: 'name',
             sortable: true,
-            // right: true,
-        },
-        {
-            name: 'Url',
-            selector: 'url',
-            // sortable: true,
-            // right: true,
+            cell: row => <div data-tag="allowRowEvents"><div style={{ fontWeight: "bold", color:"#fff" }}><a target="_blank" rel="noreferrer" href={`${row.url}`}>{row.name}</a></div></div>,
         },
         {
             name: 'H (mag)',
@@ -148,6 +148,12 @@ export class Neo extends Component {
             selector: 'is_potentially_hazardous_asteroid',
             sortable: true,
             // right: true,
+        },
+        {
+            name: 'Close Approach',
+            selector: 'close_approach_date',
+            sortable: true,
+            cell: row => <div data-tag="allowRowEvents"><div style={{ fontWeight: "bold" }}>{row.close_approach_date}</div><div style={{fontSize: "10px"}}>Relative Velocity(kmph): {row.relative_velocity} <br /> Miss Distance(km): {row.miss_distance}</div> </div>,
         },
     ];
 

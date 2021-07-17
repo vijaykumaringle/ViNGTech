@@ -171,3 +171,9 @@
   font-style: italic;
 }
 
+a:link {
+  color: rgb(121 167 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+

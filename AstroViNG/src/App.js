@@ -5,6 +5,7 @@ import './App.css';
 import { Apd } from './components/Apd'
 import { Mrp } from './components/Mrp'
 import { Neo } from './components/Neo'
+import { InsightMarsWeather } from './components/InsightMarsWeather'
 
 export class App extends Component {
 
@@ -32,6 +33,8 @@ export class App extends Component {
       return(<Mrp/>)
     } else if(this.state.selectedComp === "Neo"){
       return(<Neo />)
+    } else if(this.state.selectedComp === "InsightMarsWeather"){
+      return(<InsightMarsWeather />)
     } else {
       return("No Comp to display")
     }
@@ -53,7 +56,7 @@ export class App extends Component {
             {/* </div>
             <div className="App-TopNav-Section nav-section-col2"> */}
               <div id="Mrp" className="App-TopNav-Item" onClick={this.onClickCompLoad.bind(this)}>Mars Rover Photos</div>
-              <div id="Insight" className="App-TopNav-Item" onClick={this.onClickCompLoad.bind(this)}>InSight: Mars Weather</div>
+              <div id="InsightMarsWeather" className="App-TopNav-Item" onClick={this.onClickCompLoad.bind(this)}>InSight: Mars Weather</div>
             </div>
           </div>
         </header>
