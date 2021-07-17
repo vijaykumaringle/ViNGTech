@@ -1,12 +1,37 @@
 import React, { Component } from 'react'
 
-import DataTable from 'react-data-table-component';
+import DataTable, { createTheme } from 'react-data-table-component';
 
 //API data
 const api_nasa = {
     "API_Name": "NASA",
     "API_key": "mSHnvBrnNo5NpCjqSlw1jfcnEYpayjyebBsWPB8C"
 }
+
+//craete theme for data table
+createTheme('solarized', {
+    text: {
+      //primary: '#268bd2',
+      primary: '#fff',
+      secondary: '#2aa198',
+    },
+    background: {
+      //default: '#002b36',
+      default: "#2d3e4a"
+    },
+    context: {
+      background: '#cb4b16',
+      text: '#FFFFFF',
+    },
+    divider: {
+      default: '#073642',
+    },
+    action: {
+      button: 'rgba(0,0,0,.54)',
+      hover: 'rgba(0,0,0,.08)',
+      disabled: 'rgba(0,0,0,.12)',
+    },
+  });
 
 
 export class Neo extends Component {
@@ -129,7 +154,7 @@ export class Neo extends Component {
     customStyles = {
         rows: {
             style: {
-                minHeight: '72px', // override the row height
+                minHeight: 'calc(15px + 3vh);', // override the row height
             }
         },
         headCells: {
@@ -145,6 +170,7 @@ export class Neo extends Component {
             },
         },
     };
+    
 
     render() {
         const { error, isLoaded, items } = this.state;
@@ -164,6 +190,7 @@ export class Neo extends Component {
                             columns={this.columns}
                             customStyles={this.customStyles}
                             data={this.state.Arr_neo_data}
+                            theme="solarized"
                         />
                     </div>
                     <div className="grid-item mrp-input-div">
