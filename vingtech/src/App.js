@@ -2,6 +2,8 @@
 import "./reset.css";
 import "./App.css";
 
+import img1 from './images/M31_Galex_960.jpg'
+
 function App() {
   return (
     <div className="App container">
@@ -91,15 +93,16 @@ function App() {
           </a>
         </section>
         <section>
-          <h2>The Title</h2>
+          <h2>AstroViNG Portal</h2>
           <img
-            alt="imgq1"
+            alt="AstroViNG"
             className="section-img profile"
-            src="http://placekitten.com/260/260"
+            src={img1}
           />
           <p>
-            Some Text goes here, some text goes here, some text goes here, some
-            text goes here.
+            Visit our AstroViNG Portal for information regarding Space, Stars, Planets and Cosmos. 
+            <br />Explore sections such as Astronomy Pic of the Day, Near Earth Object Tracker, Mars Rover Photos, Insight: Mars Weather. 
+            <br />More coming soon.
           </p>
           <a href="/" className="info-link">
             Learn more...
