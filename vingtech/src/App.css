@@ -1,16 +1,10 @@
-.App {
+/* .App {
   text-align: center;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -26,13 +20,105 @@
 
 .App-link {
   color: #61dafb;
+} */
+
+body {
+  /* font-family: arial; */
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+header {
+  grid-column: span 3;
+  padding: 30px;
+  text-align: center;
+  /* font-size: 1.4em; */
+  font-size: calc(10px + 2vmin);
+  background-color: #282c34;
+  color: white;
+  min-height: 10vh;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  background-color: #393939;
+  color: #fff;
+}
+
+nav {
+  background-color: #414449;
+  padding: 20px;
+  color: white;
+}
+
+aside {
+  padding: 20px;
+  background-color: #414449;
+  color: #fff;
+}
+
+footer {
+  grid-column: span 3;
+  padding: 30px;
+  text-align: center;
+  font-size: 1.4em;
+  background-color: #282c34;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 1em;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.App-link {
+  /* color: #61dafb; */
+  color: #fff;
+}
+
+.logo-div {
+  text-align: left;
+}
+.logo-tagline-div {
+  text-align: left;
+  font-size: calc(4px + 0.3em);
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  border-top: 3px solid #3498db;
+  border-radius: 3px;
+  margin-top: 1.1vw;
+  width: 90vw;
+  float: right;
+}
+
+.options-link {
+  text-decoration: none;
+  /* font-size: 0.9em; */
+  font-size: calc(8px + 0.9vw);
+  color: var(--red);
 }
