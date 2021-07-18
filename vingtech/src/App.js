@@ -28,7 +28,7 @@ function App() {
           <a href="/" className="options-link">
             About
           </a>
-          <a href="/" className="options-link">
+          <a href="/astroving" className="options-link">
             AstroViNG
           </a>
           <a href="/" className="options-link">
@@ -48,17 +48,17 @@ function App() {
         //  style={{textAlign: 'left', display: 'inline-block', fontSize:'0.7em'}}
         >
           <div>
-            <a className="App-link" href="./">
+            <a className="App-link" href="/">
               Home
             </a>
           </div>
           <div>
-            <a className="App-link" href="./">
+            <a className="App-link" href="/">
               VingTech
             </a>
           </div>
           <div>
-            <a className="App-link" href="./astroving">
+            <a className="App-link" href="/astroving">
               AstroViNG
             </a>
           </div>
@@ -138,6 +138,21 @@ function App() {
       </main>
       <aside>Related links</aside>
       <footer>
+      <div>
+          <div className="logo-div-footer">
+            <h2>
+              <span style={{ fontWeight: 300 }}>ViNG</span>
+              <span style={{ fontWeight: 500, textDecoration: "overline" }}>
+                Tech
+              </span>
+            </h2>
+          </div>
+          <div className="logo-tagline-footer">
+            <p>
+              Helping Connect <i>Technology</i> to Your Business
+            </p>
+          </div>
+        </div>
         <div className="footer-copyright">
           Copyright &copy; 2021 ViNG Tech Solutions. All rigths reserved.
         </div>

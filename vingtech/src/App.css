@@ -212,3 +212,13 @@ section {
 .footer-copyright {
   font-size: calc(5px + 0.5vw);
 }
+.logo-div-footer {
+  text-align: left;
+}
+.logo-div-footer h2{
+  font-size: calc(10px + 0.4em);
+}
+.logo-tagline-footer {
+  text-align: left;
+  font-size: calc(3px + 0.2em);
+}
