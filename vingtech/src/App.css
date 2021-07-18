@@ -154,9 +154,9 @@ p {
 
 .options-link {
   text-decoration: none;
-  /* font-size: 0.9em; */
   font-size: calc(8px + 0.9vw);
-  color: #3498db;
+  /* color: #3498db; */
+  color: #fff;
 }
 
 .info-link {
@@ -207,4 +207,8 @@ section {
   width: 80%;
   border-radius: 50%;
   margin-bottom: 10px;
+}
+
+.footer-copyright {
+  font-size: calc(5px + 0.5vw);
 }

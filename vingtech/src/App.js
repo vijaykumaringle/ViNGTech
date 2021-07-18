@@ -65,7 +65,6 @@ function App() {
         </div>
       </nav>
       <main>
-        
         <section>
           <h2>The Title</h2>
           <p>
@@ -138,7 +137,11 @@ function App() {
         </section>
       </main>
       <aside>Related links</aside>
-      <footer>Footer</footer>
+      <footer>
+        <div className="footer-copyright">
+          Copyright &copy; 2021 ViNG Tech Solutions. All rigths reserved.
+        </div>
+      </footer>
     </div>
   );
 }
