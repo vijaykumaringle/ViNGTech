@@ -36,7 +36,7 @@ function App() {
           <a href="/" className="options-link">
             About
           </a>
-          <a href="/astroving" className="options-link">
+          <a href="/astroving/index.html" className="options-link">
             AstroViNG
           </a>
           <a href="/" className="options-link">
@@ -60,7 +60,7 @@ function App() {
             </a>
           </div>
           <div className="App-Nav-element">
-            <a className="App-link" href="/AstroViNG">
+            <a className="App-link" href="/astroving/index.html">
               AstroViNG
             </a>
           </div>
@@ -100,14 +100,14 @@ function App() {
               </p>
             </div>
           }
-          link="/"
+          link="/astroving/index.html"
           imgLink={astronaut}
           styleCust={{borderRadius: '50%', width: '100%'}}
         />
 
         <CardImageCenter
           title={
-            <a style={{ color: "#fff" }} href="/AstroViNG">
+            <a style={{ color: "#fff" }} href="/astroving/index.html">
               AstroViNG Portal
             </a>
           }
@@ -125,7 +125,7 @@ function App() {
               <p>More coming soon!!</p>
             </div>
           }
-          link="/AstroViNG"
+          link="/astroving/index.html"
           imgLink={img1}
           imgAlt="AstroViNG"
         />
