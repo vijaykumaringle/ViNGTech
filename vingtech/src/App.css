@@ -74,7 +74,7 @@ body {
 
 header {
   grid-column: span 3;
-  padding: 30px;
+  padding: 15px;
   text-align: center;
   /* font-size: 1.4em; */
   font-size: calc(10px + 2vmin);
@@ -87,12 +87,13 @@ main {
   flex: 1;
   padding: 20px;
   background-color: #393939;
+  font-size: calc(8px + 0.8vmin);
   color: #fff;
 }
 
 nav {
   background-color: #414449;
-  padding: 20px;
+  padding: 15px;
   color: white;
 }
 
@@ -104,7 +105,7 @@ aside {
 
 footer {
   grid-column: span 3;
-  padding: 30px;
+  padding: 15px;
   text-align: center;
   font-size: 1.4em;
   background-color: #282c34;
@@ -167,7 +168,7 @@ p {
 }
 
 section {
-  border-top: 3px solid #3498db;
+  border-top: 3px solid var(--red);
   border-radius: 3px;
   /* background-color: #494b4e; */
   background-color: #535353;
@@ -221,4 +222,8 @@ section {
 .logo-tagline-footer {
   text-align: left;
   font-size: calc(3px + 0.2em);
+}
+
+.App-Nav-element {
+  padding: calc(5px + 0.3vw);
 }

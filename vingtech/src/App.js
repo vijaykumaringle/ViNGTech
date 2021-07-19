@@ -2,7 +2,13 @@
 import "./reset.css";
 import "./App.css";
 
-import img1 from './images/M31_Galex_960.jpg'
+import img1 from "./images/M31_Galex_960.jpg";
+import astronaut from "./images/astronaut_thumbs-up.gif"
+import CardSimple1 from "./Components/Cards/CardSimple1";
+import CardSimple2 from "./Components/Cards/CardSimple2";
+import CardSimple3 from "./Components/Cards/CardSimple3";
+import CardSimpleImage from "./Components/Cards/CardSimpleImage";
+import CardImageCenter from "./Components/Cards/CardImageCenter";
 
 function App() {
   return (
@@ -45,103 +51,139 @@ function App() {
         </div>
       </header>
       <nav>
-        Navigation
         <div
         //  style={{textAlign: 'left', display: 'inline-block', fontSize:'0.7em'}}
         >
-          <div>
+          <div className="App-Nav-element">
             <a className="App-link" href="/">
               Home
             </a>
           </div>
-          <div>
-            <a className="App-link" href="/">
-              VingTech
-            </a>
-          </div>
-          <div>
-            <a className="App-link" href="/astroving">
+          <div className="App-Nav-element">
+            <a className="App-link" href="/AstroViNG">
               AstroViNG
             </a>
           </div>
         </div>
       </nav>
       <main>
-        <section>
-          <h2>The Title</h2>
-          <p>
-            Some Text goes here, some text goes here, some text goes here, some
-            text goes here.
-          </p>
-          <a href="/" className="info-link">
-            Learn more...
-          </a>
-        </section>
-        <section>
-          <h2>The Title</h2>
-          <p>
-            Some Text goes here, some text goes here, some text goes here, some
-            text goes here.
-          </p>
-          <img
-            className="section-img"
-            src="https://emojipedia-us.s3.amazonaws.com/thumbs/120/emoji-one/104/chart-with-upwards-trend_1f4c8.png"
-            alt="important graph"
-          />
-          <a href="/" className="info-link">
-            Learn more...
-          </a>
-        </section>
-        <section>
-          <h2>AstroViNG Portal</h2>
-          <img
-            alt="AstroViNG"
-            className="section-img profile"
-            src={img1}
-          />
-          <p>
-            Visit our AstroViNG Portal for information regarding Space, Stars, Planets and Cosmos. 
-            <br />Explore sections such as Astronomy Pic of the Day, Near Earth Object Tracker, Mars Rover Photos, Insight: Mars Weather. 
-            <br />More coming soon.
-          </p>
-          <a href="/" className="info-link">
-            Learn more...
-          </a>
-        </section>
-        <section className="bigbottom">
-          <h2>The Title</h2>
-          <p>
-            Some Text goes here, some text goes here, some text goes here, some
-            text goes here.
-          </p>
-          <a className="bigbottom-link info-link" href="/">
-            Learn more...
-          </a>
-        </section>
-        <section className="bigtitle">
-          <h2 className="bigtitle-title">The Title</h2>
-          <p>
-            Some Text goes here, some text goes here, some text goes here, some
-            text goes here.
-          </p>
-          <a href="/" className="info-link">
-            Learn more...
-          </a>
-        </section>
-        <section>
-          <h2>The Title</h2>
-          <p>
-            Some Text goes here, some text goes here, some text goes here, some
-            text goes here.
-          </p>
-          <a href="/" className="info-link">
-            Learn more...
-          </a>
-        </section>
+        <CardSimple1
+          title="About Us"
+          paraText={
+            <div>
+              <p>
+                We are like minded technology experts who wants to help
+                technology reach business.
+              </p>
+              <p>
+                We are a technology solutions provider with vision of 'Helping
+                Connect Technology to Your Business'.{" "}
+              <br />
+                We believe technology can be the tonic you need to boost your
+                busienss growth and keep yourself ahead of competition.
+              </p>
+              <p>And also we love Astrophysics and Cosmos basically Everything Space.</p>
+            </div>
+          }
+          link="/"
+        />
+
+        <CardSimpleImage
+          title="Our Love for Space!?"
+          paraText={
+            <div>
+              <p>
+                Who doesn't? Space is something everyone dreams to visit and everybody wants to be an astronaut (atlast a wish of everyone as a child). We are the adults who have that love and desire still intact.
+              </p>
+              <p>
+                We have entered into space travel/tourism era and we want to be part of it. 
+              </p>
+            </div>
+          }
+          link="/"
+          imgLink={astronaut}
+          styleCust={{borderRadius: '50%', width: '100%'}}
+        />
+
+        <CardImageCenter
+          title={
+            <a style={{ color: "#fff" }} href="/AstroViNG">
+              AstroViNG Portal
+            </a>
+          }
+          paraText={
+            <div>
+              <p>
+                Explore information about space, stars, planets and much more.{" "}
+              </p>
+
+              <li>Astronomy Pic of the Day</li>
+              <li>Near Earth Object (Neo)</li>
+              <li>Mars Rover Photos</li>
+              <li>InSight: Mars Weather</li>
+              <br />
+              <p>More coming soon!!</p>
+            </div>
+          }
+          link="/AstroViNG"
+          imgLink={img1}
+          imgAlt="AstroViNG"
+        />
+
+        <CardSimple2
+          title="What we do?"
+          paraText={
+            <div>
+              <p>
+                We help you understand technology to enhance your business
+                growth.{" "}
+              </p>
+
+              <li>Technology Adoption Services</li>
+              <li>Requirement Analysis & Reporting Services </li>
+              <li>Designing Software Blueprint </li>
+              <li>IOT Services</li>
+              <li>Analysis to Implementation Services</li>
+              <li>Data and Market analysis practice solutions</li>
+              <li>Digital Marketing Services</li>
+            </div>
+          }
+          link="/"
+        />
+
+        <CardSimpleImage
+          title="Growing Business with Technology Adoption"
+          paraText={
+            <div>
+              <p>
+                Discovering business growth with technology adoption and
+                streamlining & automating business processes.
+              </p>
+              <li>Adoption of Tools</li>
+              <li>Digital Marketing</li>
+              <li>Automate Processes</li>
+              <li>Utilize Data</li>
+            </div>
+          }
+          link="/"
+          imgLink="https://emojipedia-us.s3.amazonaws.com/thumbs/120/emoji-one/104/chart-with-upwards-trend_1f4c8.png"
+        />
+
+        {/* <CardSimple3
+          title="The Title bigtitle"
+          paraText="Some Text goes here, some text goes here, some text goes here, some text goes here. bigtitle"
+          link="/"
+        />
+        <CardSimple1
+          title="The new title"
+          paraText="Some Text goes here, some text goes here, some text goes here, some
+          text goes here."
+          link="/"
+        /> */}
       </main>
       <aside>Related links</aside>
       <footer>
-      <div>
+        <div style={{ display: "inline-block", width: "40%" }}>
           <div className="logo-div-footer">
             <h2>
               <span style={{ fontWeight: 300 }}>ViNG</span>
@@ -156,8 +198,11 @@ function App() {
             </p>
           </div>
         </div>
-        <div className="footer-copyright">
-          Copyright &copy; 2021 ViNG Tech Solutions. All rigths reserved.
+        <div
+          className="footer-copyright"
+          style={{ display: "inline-block", width: "60%", textAlign: "left" }}
+        >
+          Copyright &copy; 2021 ViNG Tech Solutions.
         </div>
       </footer>
     </div>
