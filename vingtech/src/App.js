@@ -2,13 +2,25 @@
 import "./reset.css";
 import "./App.css";
 
+
 import img1 from "./images/M31_Galex_960.jpg";
-import astronaut from "./images/astronaut_thumbs-up.gif"
+import astronaut from "./images/astronaut_thumbs-up.gif";
 import CardSimple1 from "./Components/Cards/CardSimple1";
 import CardSimple2 from "./Components/Cards/CardSimple2";
 import CardSimple3 from "./Components/Cards/CardSimple3";
 import CardSimpleImage from "./Components/Cards/CardSimpleImage";
 import CardImageCenter from "./Components/Cards/CardImageCenter";
+
+
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
 
 function App() {
   return (
@@ -25,7 +37,9 @@ function App() {
           </div>
           <div className="logo-tagline-div">
             <p>
-              Helping Connect <i>Technology</i> to Your Business
+              Helping Connect{" "}
+              <span style={{ fontStyle: "italic" }}>Technology</span> to Your
+              Business
             </p>
           </div>
         </div>
@@ -49,11 +63,16 @@ function App() {
             Contant Us
           </a>
         </div>
+        
       </header>
-      <nav>
-        <div
-        //  style={{textAlign: 'left', display: 'inline-block', fontSize:'0.7em'}}
-        >
+      
+      <nav className="topnav">
+      <div>
+        <span style={{cursor: "pointer"}} className="icon" onClick={() => myFunction()}>
+          <i className="fa fa-bars"></i>
+        </span>
+      </div>
+        <div id="myLinks">
           <div className="App-Nav-element">
             <a className="App-link" href="/">
               Home
@@ -77,12 +96,14 @@ function App() {
               </p>
               <p>
                 We are a technology solutions provider with vision of 'Helping
-                Connect Technology to Your Business'.{" "}
-              <br />
+                Connect Technology to Your Business'. <br />
                 We believe technology can be the tonic you need to boost your
                 busienss growth and keep yourself ahead of competition.
               </p>
-              <p>And also we love Astrophysics and Cosmos basically Everything Space.</p>
+              <p>
+                And also we love Astrophysics and Cosmos basically Everything
+                Space.
+              </p>
             </div>
           }
           link="/"
@@ -93,16 +114,20 @@ function App() {
           paraText={
             <div>
               <p>
-                Who doesn't? Space is something everyone dreams to visit and everybody wants to be an astronaut (atlast a wish of everyone as a child). We are the adults who have that love and desire still intact.
+                Who doesn't? Space is something everyone dreams to visit and
+                everybody wants to be an astronaut (atlast a wish of everyone as
+                a child). We are the adults who have that love and desire still
+                intact.
               </p>
               <p>
-                We have entered into space travel/tourism era and we want to be part of it. 
+                We have entered into space travel/tourism era and we want to be
+                part of it.
               </p>
             </div>
           }
           link="/astroving/index.html"
           imgLink={astronaut}
-          styleCust={{borderRadius: '50%', width: '100%'}}
+          styleCust={{ borderRadius: "50%", width: "100%" }}
         />
 
         <CardImageCenter
@@ -194,7 +219,9 @@ function App() {
           </div>
           <div className="logo-tagline-footer">
             <p>
-              Helping Connect <i>Technology</i> to Your Business
+              Helping Connect{" "}
+              <span style={{ fontStyle: "italic" }}>Technology</span> to Your
+              Business
             </p>
           </div>
         </div>
