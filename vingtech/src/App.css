@@ -55,6 +55,14 @@ body {
   }
 
   .topnav #myLinks {
+    display: block;
+  }
+  
+}
+
+@media (max-width: 620px) {
+
+  .topnav #myLinks {
     display: none;
   }
   
@@ -73,6 +81,10 @@ body {
   .topnav #myLinks {
     display: none;
   }
+
+  .options {
+    display: none;
+  }
   
 }
 
@@ -82,6 +94,10 @@ body {
   }
 
   .topnav #myLinks {
+    display: block;
+  }
+
+  .options {
     display: block;
   }
 
@@ -175,6 +191,14 @@ p {
   font-size: calc(8px + 0.9vw);
   /* color: #3498db; */
   color: #fff;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.options-link:hover {
+  background-color: #ddd;
+  color: black
 }
 
 .info-link {
@@ -296,3 +320,4 @@ section:hover {
 }
 
 /* Hamburger menu end */
+

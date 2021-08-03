@@ -54,7 +54,7 @@ function App() {
             AstroViNG
           </a>
           <a href="/" className="options-link">
-            Blog
+            Blogs
           </a>
           <a href="/" className="options-link">
             Social Media
@@ -81,6 +81,21 @@ function App() {
           <div className="App-Nav-element">
             <a className="App-link" href="/astroving/index.html">
               AstroViNG
+            </a>
+          </div>
+          <div className="App-Nav-element">
+            <a className="App-link" href="/astroving/index.html">
+              Blogs
+            </a>
+          </div>
+          <div className="App-Nav-element">
+            <a className="App-link" href="/astroving/index.html">
+              Social Media
+            </a>
+          </div>
+          <div className="App-Nav-element">
+            <a className="App-link" href="/astroving/index.html">
+              Contact Us
             </a>
           </div>
         </div>
