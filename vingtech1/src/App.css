@@ -1,0 +1,323 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+} */
+
+
+:root {
+  --blue: #34495e;
+  --green: #e74c3c;
+  --yellow: #C9C243;
+  --orange: #FFA644;
+  --red: #3498db;
+}
+
+body {
+  /* font-family: arial; */
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  .topnav #myLinks {
+    display: block;
+  }
+  
+}
+
+@media (max-width: 620px) {
+
+  .topnav #myLinks {
+    display: none;
+  }
+  
+}
+
+@media (min-width: 620px) {
+  main {
+    column-count: 2;
+    column-gap: 20px;
+  }
+  
+  section {
+    break-inside: avoid;
+  }
+
+  .topnav #myLinks {
+    display: none;
+  }
+
+  .options {
+    display: none;
+  }
+  
+}
+
+@media (min-width: 960px) {
+  main {
+     column-count: 3;
+  }
+
+  .topnav #myLinks {
+    display: block;
+  }
+
+  .options {
+    display: block;
+  }
+
+}
+
+header {
+  grid-column: span 3;
+  padding: 15px;
+  text-align: center;
+  /* font-size: 1.4em; */
+  font-size: calc(10px + 2vmin);
+  background-color: #282c34;
+  color: white;
+  min-height: 10vh;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  background-color: #393939;
+  /* font-size: calc(8px + 0.8vmin); */
+  font-size: calc(10px + 0.5vmin);;
+  color: #fff;
+  line-height: 1.4em;
+}
+
+nav {
+  background-color: #414449;
+  padding: 15px;
+  color: white;
+}
+
+aside {
+  padding: 20px;
+  background-color: #414449;
+  color: #fff;
+}
+
+footer {
+  grid-column: span 3;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.4em;
+  background-color: #282c34;
+  color: white;
+}
+
+h1 {
+  margin-bottom: 1em;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.App-link {
+  /* color: #61dafb; */
+  color: #fff;
+}
+
+h2 {
+  font-size: 1.4em;
+  padding: 10px;
+}
+
+p {
+  margin-bottom: 1em;
+  padding: 0 10px;
+}
+
+.logo-div {
+  text-align: left;
+}
+.logo-tagline-div {
+  text-align: left;
+  font-size: calc(4px + 0.3em);
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  border-top: 3px solid #3498db;
+  border-radius: 3px;
+  margin-top: 1.1vw;
+  width: 90vw;
+  float: right;
+}
+
+.options-link {
+  text-decoration: none;
+  font-size: calc(8px + 0.9vw);
+  /* color: #3498db; */
+  color: #fff;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.options-link:hover {
+  background-color: #ddd;
+  color: black
+}
+
+.info-link {
+  text-decoration: none;
+  color: var(--green);
+  padding: 10px;
+  display: block;
+}
+
+section {
+  border-top: 3px solid var(--red);
+  border-radius: 3px;
+  /* background-color: #494b4e; */
+  background-color: #535353;
+  color: #fff;
+  margin-bottom: 20px;
+  overflow: hidden;
+  /* padding: 10px; */
+}
+
+section:hover {
+  box-shadow: 1px 2px 21px #222222;
+}
+
+.section-img {
+  display: block;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.section-img {
+  display: block;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.bigtitle {
+  padding: 0;
+}
+
+.bigtitle-title {
+  color: white;
+  background-color: var(--red);
+  margin-bottom: 10px;
+}
+
+.bigbottom-link {
+  background-color: var(--green);
+  color: white;
+}
+
+.profile {
+  width: 80%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.footer-copyright {
+  font-size: calc(5px + 0.5vw);
+}
+.logo-div-footer {
+  text-align: left;
+}
+.logo-div-footer h2{
+  font-size: calc(10px + 0.4em);
+}
+.logo-tagline-footer {
+  text-align: left;
+  font-size: calc(3px + 0.2em);
+}
+
+.App-Nav-element {
+  padding: calc(5px + 0.3vw);
+}
+
+
+/* Hamburger menu start */
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+/* .topnav #myLinks {
+  display: none;
+} */
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Hamburger menu end */
+
