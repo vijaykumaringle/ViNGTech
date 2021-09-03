@@ -1,22 +1,29 @@
-.App {
+.App1 {
   text-align: center;
   z-index: 2;
+  height: 100vh;
 }
 
-.App-logo {
+.App-logo2 {
   height: 40vmin;
   pointer-events: none;
 }
 
+.App1 a:link {
+  color: rgb(121 167 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .App-logo1 {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
+.App-header1 {
   /* background-color: #282c34; */
-  min-height: 100vh;
+  min-height: 85%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +32,15 @@
   color: white;
 }
 
-.App-link {
+.App-footer1 {
+  padding: 15px;
+  display: block;
+  color: #fff;
+  background-color: #2b3538;
+  margin-bottom: 0;  
+}
+
+.App-link1 {
   color: #61dafb;
 }
 
@@ -42,10 +57,10 @@
   display: inline-flex;
   padding: 15px;
   margin: 20px;
-  /* height: 40vh;
-  width: 25vw; */
-  height: 250px;
-  width: 300px;
+  height: 25vh;
+  /* width: 20vw; */
+  /* height: 250px; */
+  width: calc(180px + 10vmin);
   /* border: 1px solid #61dafb; */
   background-color: #35555d;
   font-size: calc(15px + 2vmin);
@@ -57,8 +72,10 @@
   border-radius: 10%;
 }
 .navItem:hover {
-  height: 280px;
-  width: 320px;
+  /* height: 280px;
+  width: 320px; */
+  height: 28vh;
+  width: calc(200px + 10vmin);
   box-shadow: 0 4px 8px 0 rgb(255, 255, 255), 0 6px 20px 0 rgb(255, 255, 255);
 }
 
@@ -93,8 +110,8 @@
 
 .bg-body {
   width: 100vw;
-  /* height: 100vh; */
-  display: flex;
+  height: 100vh;
+  /* display: flex; */
   position: fixed;
   z-index: -2;
   /* background: #131518; */
