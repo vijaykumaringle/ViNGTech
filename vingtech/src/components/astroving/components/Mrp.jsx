@@ -20,7 +20,7 @@ export class Mrp extends Component {
             isLoaded: false,
             items: [],
             images: [],
-            mrp_sol: 1000,
+            mrp_sol: 905,
             mrp_rover: "Curiosity"
         };
     }
@@ -35,7 +35,8 @@ export class Mrp extends Component {
             let Arr_images = [];
             this.state.items.map((item, index) => {
                 //return this.state.images.push({original: item.img_src})
-                return Arr_images.push({ original: `${item.img_src}`, thumbnail: `${item.img_src}`, originalTitle: `${item.rover.name}_${item.camera.name}_${item.id}` })
+                let imglink = item.img_src.replace('http://','https://');
+                return Arr_images.push({ original: `${imglink}`, thumbnail: `${imglink}`, originalTitle: `${item.rover.name}_${item.camera.name}_${item.id}` })
             });
             this.setState({
                 images: Arr_images
@@ -70,7 +71,8 @@ export class Mrp extends Component {
             let Arr_images = [];
             this.state.items.map((item, index) => {
                 //return this.state.images.push({original: item.img_src})
-                return Arr_images.push({ original: `${item.img_src}`, thumbnail: `${item.img_src}`, originalTitle: `${item.rover.name}_${item.camera.name}_${item.id}` })
+                let imglink = item.img_src.replace('http://','https://');
+                return Arr_images.push({ original: `${imglink}`, thumbnail: `${imglink}`, originalTitle: `${item.rover.name}_${item.camera.name}_${item.id}` })
             });
             this.setState({
                 images: Arr_images
